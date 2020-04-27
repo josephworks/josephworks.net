@@ -1,0 +1,19 @@
+{
+  "name": "josephworks.net",
+  "version": "1.0.0",
+  "description": "JosephWorks' Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephworks/josephworks.net.git"
+  },
+  "author": "Joseph Robinson",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/josephworks/josephworks.net/issues"
+  },
+  "homepage": "https://github.com/josephworks/josephworks.net#readme"
+}
