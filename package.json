@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/josephworks/josephworks.net/issues"
   },
-  "homepage": "https://github.com/josephworks/josephworks.net#readme"
+  "homepage": "https://github.com/josephworks/josephworks.net#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.3.3",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0"
+  }
 }
