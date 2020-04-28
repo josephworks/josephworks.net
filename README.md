@@ -5,5 +5,5 @@ My website!
 
 ```shell script
 npm install
-npm run run
+npm run site
 ```
