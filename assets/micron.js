@@ -65,7 +65,7 @@ const watchEvents = function () {
 
 // If micron.js gets fetched asynchronously
 // We may or may not catch the DOMContentLoaded event
-if (document.readyState !== "loading") {
+if (document.readyState != "loading") {
     watchEvents();
 } else {
     document.addEventListener("DOMContentLoaded", function () {
