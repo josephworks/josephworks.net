@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "run": "index.html",
+    "site": "index.html",
+    "deploy": "bash scripts/deploy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
