@@ -1,12 +1,12 @@
-var watchEvents = function() {
+const watchEvents = function () {
     window.addEventListener("click", function (ev) {
-        var micronTrigger = ev.target;
-        var micronPrefix = "mjs-";
-        var micronData = micronTrigger.dataset.micron;
-        var micronDataDuration = micronTrigger.dataset.micronDuration;
-        var micronDataTiming = micronTrigger.dataset.micronTiming;
-        var micronBind = micronTrigger.dataset.micronBind;
-        var micronPuppet = micronTrigger.dataset.micronId;
+        const micronTrigger = ev.target;
+        const micronPrefix = "mjs-";
+        const micronData = micronTrigger.dataset.micron;
+        const micronDataDuration = micronTrigger.dataset.micronDuration;
+        const micronDataTiming = micronTrigger.dataset.micronTiming;
+        const micronBind = micronTrigger.dataset.micronBind;
+        const micronPuppet = micronTrigger.dataset.micronId;
         //Global Trigger
         if (micronData !== undefined) {
             if (micronBind === "true") {
@@ -61,11 +61,11 @@ var watchEvents = function() {
         }
 
     });
-}
+};
 
 // If micron.js gets fetched asynchronously
 // We may or may not catch the DOMContentLoaded event
-if (document.readyState != "loading") {
+if (document.readyState !== "loading") {
     watchEvents();
 } else {
     document.addEventListener("DOMContentLoaded", function () {
@@ -74,14 +74,14 @@ if (document.readyState != "loading") {
 }
 
 //Micron Prototype
-var Micron = function () {
-    var ele;
-    var node;
+const Micron = function () {
+    let ele;
+    let node;
 
     //Get Element from DOM
-    var getEle = function (paramEle) {
+    const getEle = function (paramEle) {
         ele = document.querySelector(paramEle);
-        if (ele != undefined && ele != null) {
+        if (ele != undefined) {
             node = ele;
             ele.parentNode.replaceChild(node, ele);
             return this;
@@ -91,14 +91,14 @@ var Micron = function () {
                 "color:red");
             return this;
         }
-    }
+    };
 
     //Animation
-    var interaction = function (paramInteraction) {
+    const interaction = function (paramInteraction) {
         if (node !== undefined && node !== null) {
-            if (paramInteraction != undefined && paramInteraction != null && paramInteraction.indexOf(" ") ==
+            if (paramInteraction != undefined && paramInteraction.indexOf(" ") ==
                 -1) {
-                var prefixAnimation = "mjs-" + paramInteraction;
+                const prefixAnimation = "mjs-" + paramInteraction;
                 node.classList.add(prefixAnimation);
                 return this;
             } else {
@@ -110,11 +110,11 @@ var Micron = function () {
         } else {
             return this;
         }
-    }
+    };
 
     //Duration
-    var duration = function (paramDuration) {
-        if (node != undefined && node != null) {
+    const duration = function (paramDuration) {
+        if (node != undefined) {
             if (isNaN(paramDuration) == false) {
                 node.style.animationDuration = paramDuration + "s";
                 return this;
@@ -125,13 +125,13 @@ var Micron = function () {
         } else {
             return this;
         }
-    }
+    };
 
-    var timing = function (paramTiming) {
-        if (node != undefined && node != null) {
+    const timing = function (paramTiming) {
+        if (node != undefined) {
             if (paramTiming == "linear" || paramTiming == "ease-in" || paramTiming == "ease-out" ||
                 paramTiming == "ease-in-out") {
-                var prefixTiming = "mjs-" + paramTiming;
+                const prefixTiming = "mjs-" + paramTiming;
                 node.classList.add(prefixTiming);
                 return this;
             } else {
@@ -142,7 +142,7 @@ var Micron = function () {
             return this;
         }
 
-    }
+    };
 
     return {
         getEle: getEle,
@@ -150,9 +150,9 @@ var Micron = function () {
         duration: duration,
         timing: timing
     }
-}
+};
 
-var micron = Micron();
+const micron = Micron();
 
 // Only export the CommonJS module if available
 if(typeof module === "object" && module.exports) {
