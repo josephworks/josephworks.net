@@ -1,5 +1,6 @@
 @import url(stylesheet.css);
 @import url(assets/micron.css);
+@import url(node_modules/bulma/css/bulma.css);
 @import url(node_modules/bootstrap/dist/css/bootstrap.css);
 @import url(node_modules/bootstrap/dist/css/bootstrap-grid.css);
 @import url(node_modules/bootstrap/dist/css/bootstrap-reboot.css);
