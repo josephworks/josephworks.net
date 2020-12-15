@@ -21,7 +21,7 @@
   "homepage": "https://github.com/josephworks/josephworks.net#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "@popperjs/core": "^2.5.4",
+    "@popperjs/core": "^2.6.0",
     "bootstrap": "^4.5.3",
     "holderjs": "^2.9.7",
     "jquery": "^3.5.1",
